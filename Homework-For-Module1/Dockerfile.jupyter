@@ -1,0 +1,6 @@
+# Use the official Jupyter Docker image as the base image
+FROM jupyter/datascience-notebook:latest
+
+# Install additional Python packages including SQLAlchemy
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --user -r /tmp/requirements.txt
